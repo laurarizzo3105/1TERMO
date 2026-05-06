@@ -1,6 +1,6 @@
 # 🐍 Portfólio de Estudos em Python
 
-Olá! Meu nome é [SEU NOME] 👋  
+Olá! Meu nome é Laura 👋  
 Sou estudante do SENAI e estou iniciando minha jornada na programação com Python.
 
 Este repositório reúne meus primeiros projetos, exercícios e aprendizados na linguagem.
