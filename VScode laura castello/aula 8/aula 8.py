@@ -119,9 +119,9 @@
 # corrigido:
 # nota = 9.5
 # if nota >=9:
-    # print("Excelente")
+#     print("Excelente")
 # else:
-    # print("Aprovado")
+#     print("Aprovado")
 
 # melhorado:
 # nota = float(input("Qual a sua nota? "))
@@ -163,7 +163,7 @@
 #     print(f"Tentativa {tentativas}: Tentando conectar...")
 #     tentativas += 1 
 
-# # melhorado:
+# melhorado:
 # tentativas = 1
 # sucesso = False
 
