@@ -24,7 +24,3 @@ Até o momento, estudei e pratiquei:
   - `int` (números inteiros)
   - `float` (números decimais)
   - `str` (textos)
-
-- Entrada de dados:
-  ```python
-  input()
