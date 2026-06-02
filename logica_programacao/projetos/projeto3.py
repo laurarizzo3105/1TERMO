@@ -21,3 +21,53 @@
 # 4. Restrição de Categoria: Livros da categoria "Raros" não podem ser emprestados
 # para a Comunidade Geral, apenas para Alunos.
 
+import tkinter as tk
+from tkinter import messagebox
+
+def validar_emprestimo():
+    nome = nome_usuario.get()
+    tipo = tipo_usuario.get()
+    categoria = categoria_livro.get()
+    dias = int(dias_emprestimo.get())
+
+    if categoria == "Raros" and tipo == "Comunidade":
+        messagebox.showerror("Negado", "Livros raros são apenas para alunos.")
+
+    elif tipo == "Aluno":
+        if dias <= 14:
+            messagebox.showinfo("Aprovado", f"{nome}, empréstimo aprovado sem taxa.")
+        else:
+            taxa = (dias - 14) * 5
+            messagebox.showinfo("Aprovado", f"Taxa: R$ {taxa}")
+
+    elif tipo == "Comunidade":
+        if dias <= 7:
+            messagebox.showinfo("Aprovado", f"{nome}, empréstimo aprovado sem taxa.")
+        else:
+            taxa = (dias - 7) * 5
+            messagebox.showinfo("Aprovado", f"Taxa: R$ {taxa}")
+
+# Janela
+janela = tk.Tk()
+janela.title("Biblioteca Digital")
+janela.geometry("300x250")
+
+tk.Label(janela, text="Nome").grid(row=0, column=0)
+nome_usuario = tk.Entry(janela)
+nome_usuario.grid(row=0, column=1)
+
+tk.Label(janela, text="Aluno ou Comunidade").grid(row=1, column=0)
+tipo_usuario = tk.Entry(janela)
+tipo_usuario.grid(row=1, column=1)
+
+tk.Label(janela, text="Comum ou Raros").grid(row=2, column=0)
+categoria_livro = tk.Entry(janela)
+categoria_livro.grid(row=2, column=1)
+
+tk.Label(janela, text="Dias").grid(row=3, column=0)
+dias_emprestimo = tk.Entry(janela)
+dias_emprestimo.grid(row=3, column=1)
+
+tk.Button(janela, text="Validar", command=validar_emprestimo).grid(row=4, column=0)
+
+janela.mainloop()
